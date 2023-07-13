@@ -1,0 +1,14 @@
+.experienciasContainer{
+    margin-top: 24px;
+    overflow: hidden;
+    &__container{
+        & p{
+            text-align: start;
+            padding: 15px 2rem;
+            font-size: 14px;
+            min-height: 250px;
+            max-height: 350px;
+        }
+    }
+}
+

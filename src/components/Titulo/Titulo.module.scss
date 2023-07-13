@@ -1,0 +1,39 @@
+h1{
+    color: var(--vermelho);
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 4.8px;
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+
+    &::after{
+        content: "front end";
+        background: #121212;
+        background: linear-gradient(to top, #FF5757 0%, transparent 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: -35px;
+        transform: scaleY(-1);
+        left: 0;
+        opacity: 100%;
+        filter: blur(2px);
+    }
+}
+
+h2{
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid var(--vermelho);
+    padding: 1rem 0;
+}

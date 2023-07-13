@@ -1,0 +1,30 @@
+.logoContainer{
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    &::before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/logoArrow.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: -1rem;
+    }
+    &::after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/logoArrow.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: -1rem;
+        transform: scaleX(-1);
+    }
+}
