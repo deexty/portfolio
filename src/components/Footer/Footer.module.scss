@@ -1,0 +1,21 @@
+.footerContainer{
+    border-top: 1px solid var(--vermelho);
+    margin: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    & p{
+        font-size: 14px;
+    }
+
+    & ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        & li{
+            margin: 0 .5rem;
+            font-size: 20px;
+        }
+    }
+}
