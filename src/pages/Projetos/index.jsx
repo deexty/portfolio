@@ -9,7 +9,7 @@ export default function Projetos() {
     return (
         <>
             <Titulo><h2 style={{textAlign: 'center', marginTop: '2rem'}}>projetos</h2></Titulo>
-            <ul classname={styles.listaContainer}>
+            <ul className={styles.listaContainer}>
                 {projetos.map(projeto => <CardProjetos projeto={projeto}></CardProjetos>)}
             </ul>
         </>
