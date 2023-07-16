@@ -1,0 +1,27 @@
+.cardContainer{
+    padding: .5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    max-width: 300px;
+    margin: 1rem;
+    & span{
+        border: 1px solid var(--vermelho);
+        padding: .5rem;
+        align-self: flex-end;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+    & p{
+        font-size: 14px;
+    }
+    & a{
+        align-self: center;
+        color: var(--vermelho-claro);
+        padding: .5rem;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+}

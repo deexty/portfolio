@@ -4,6 +4,7 @@ import Header from './components/Header';
 import { ExperienciasProvider } from './context/ExperienciasContext';
 import { ProjetosProvider } from './context/ProjetosContext';
 import Footer from './components/Footer';
+import Projetos from './pages/Projetos';
 
 function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ function AppRoutes() {
             <Header></Header>
             <Routes>
               <Route path='/' element={<Inicio></Inicio>}></Route>
+              <Route path='/projetos' element={<Projetos></Projetos>}></Route>
             </Routes>
             <Footer></Footer>
           </ProjetosProvider>

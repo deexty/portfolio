@@ -6,10 +6,13 @@ import ExperienciasContainer from '../../components/ExperienciasContainer'
 import sobreMimSvg from '../../assets/sobreMim.svg'
 import {ProjetosContext} from '../../context/ProjetosContext'
 import NavLink from '../../components/NavLink'
+import CardProjetos from '../../components/CardProjetos'
+import habilidades from '../../jsons/habilidades.json'
 
 export default function Inicio() {
     const {projetos} = useContext(ProjetosContext);
     const randomItems = projetos.sort(() => Math.random() - 0.5).slice(0, 3);
+    console.log(habilidades[1]);
     return (
         <>
             <section className={styles.headeBanner} id='inicio'>
@@ -28,16 +31,24 @@ export default function Inicio() {
                     <ExperienciasContainer></ExperienciasContainer>
                 </div>
             </section>
+            <section className={styles.habilidadesContainer}>
+                <Titulo><h2>habilidades</h2></Titulo>
+                <ul>
+                    {habilidades.map(habilidade => {
+                        return(
+                            <li>
+                                <div style={{backgroundImage: `url("/icons/${habilidade.titulo}-icon.svg")`}}></div>
+                                <p>{habilidade.titulo}</p>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </section>
             <section className={styles.projetosContainer}>
-                <Titulo><h2>Projetos recentes</h2></Titulo>
+                <Titulo><h2>Projetos</h2></Titulo>
                 <ul>
                     {randomItems.map((projeto,i) =>{
-                        return <li>
-                            <h3>{projeto.name}</h3>
-                            <p>{projeto.description}</p>
-                            <span>{projeto.language}</span>
-                            <a href={projeto.html_url} target="_blank">acessar</a>
-                        </li>;
+                        return <CardProjetos projeto={projeto} key={projeto.name}></CardProjetos>;
                     })}
                 </ul>
                 <div>

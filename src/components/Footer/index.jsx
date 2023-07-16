@@ -9,10 +9,10 @@ export default function Footer() {
             <p>copyright © 2023 eduardo soares</p>
             <ul>
                 <li>
-                    <FaLinkedinIn></FaLinkedinIn>
+                    <a href='https://www.linkedin.com/in/eduardo-soares-14ab94233/'><FaLinkedinIn></FaLinkedinIn></a>
                 </li>
                 <li>
-                    <AiFillGithub></AiFillGithub>
+                    <a href="https://github.com/deexty"><AiFillGithub></AiFillGithub></a>
                 </li>
             </ul>
         </footer>

@@ -13,8 +13,7 @@ export default function Header() {
             </div>
             <nav>
                 <NavLink link={"/"} titulo={"inicio"}></NavLink> 
-                <NavLink link={"/"} titulo={"projetos"}></NavLink> 
-                <NavLink link={"/"} titulo={"contatos"}></NavLink> 
+                <NavLink link={"/projetos"} titulo={"projetos"}></NavLink> 
             </nav>
             <button><RiMenuFoldLine></RiMenuFoldLine></button>
             {/* <aside className={styles.headerContainer__menu}>

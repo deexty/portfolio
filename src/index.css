@@ -23,3 +23,19 @@ code {
 
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff5757;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width:2px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff5757;
+    border-radius: 10px;
+  }
