@@ -71,6 +71,7 @@ export default {
         'lastProject-vetor': "url('/elements/lastProject-vetor.svg')",
         'right_arrow': "url('/icons/right_arrow.svg')",
         'down_arrow': "url('/icons/down_arrow.svg')",
+        'close': "url('/icons/close.svg')",
       },
       fontFamily:{
         'didot': [

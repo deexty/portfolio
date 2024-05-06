@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom"
-import projeto from "../../assets/img/projeto_teste.png"
 import SkillsContainer from "../SkillsContainer"
 
-export default function ItemsProjeto({ordem}) {
+export default function ItemsProjeto({projeto}) {
+    const {titulo, imagem, descricao, skills, deploy, repositorio, _id} = projeto
     return (
-        <li data-aos="fade-up">
-            <p className="text-xl pl-6 mb-6 border-l-2 border-white">nome</p>
-            <img src={projeto}></img>
-            <p className="my-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam lorem mauris, id lacinia nunc semper eu. Etiam gravida ipsum nunc, at ultrices nisl gravida non... </p>
-            <div className="flex justify-between">
-                <Link to={"/projetos/1"} className="w-full mr-3 text-center border-2 border-white rounded py-1 hover:text-gray hover:border-gray">ver detalhes</Link>
+        <li className="animate-fade">
+            <p className="text-xl pl-6 mb-6 border-l-2 border-white">{titulo}</p>
+            <img src={`${import.meta.env.VITE_API_URL}/imagem/${imagem}`}></img>
+            <p className="my-6">{(descricao).substring(0,200) + "..."}</p>
+            <div className="flex justify-between items-center">
+                <Link to={`/projetos/${_id}`} className="px-5 mr-3 text-center border-2 border-white rounded py-1 hover:text-gray hover:border-gray">ver detalhes</Link>
                 <ul className="flex">
-                    <SkillsContainer></SkillsContainer>
-                    <SkillsContainer></SkillsContainer>
-                    <SkillsContainer></SkillsContainer>
+                    {skills.map((element, i) => {
+                        if(i <= 2){
+                            return <SkillsContainer key={i} skill={element}></SkillsContainer>
+                        }
+                    })}
                 </ul>
             </div>
         </li>

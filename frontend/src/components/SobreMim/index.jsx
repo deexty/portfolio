@@ -2,17 +2,48 @@ import { Link } from "react-router-dom";
 import me from "../../assets/img/me.png"
 import TituloSecundario from "../TituloSecundario";
 import SkillsContainer from "../SkillsContainer";
+import { useEffect, useState } from "react";
+import { buscaSkills } from "../../services/skills";
 
 export default function SobreMim() {
+  const [skills, setSkills] = useState()
+
+  const topicos = [
+    ["Desenvolvedor Full-Stack Apaixonado","Com anos de estudo e prática autodidata."],
+    ["Habilidades em Tecnologias Avançadas","Experiência em linguagens de programação para front-end e back-end, e metodologias ágeis."],
+    ["Colaboração e Comunicação","Valorizo o trabalho em equipe e a comunicação eficaz."],
+    ["Adaptabilidade","Capacidade de se adaptar rapidamente a novos desafios."],
+    ["Busca por Oportunidades","Desejo de contribuir com paixão e crescimento contínuo em tecnologia."],
+    ["Entusiasmo","Pronto para se juntar a uma equipe dinâmica e inovadora e alinhar habilidades com as suas necessidades."],
+  ]
+
+  useEffect(() => {
+      const carregaSkills = async () => {
+        try {
+          const skillsCarregadas = await buscaSkills();
+          setSkills(skillsCarregadas);
+        } catch (error) {
+          // Lidar com erros
+          console.error('Erro ao carregar as habilidades:', error);
+        }
+      };
+  
+      carregaSkills();
+  },[])
+
     return(
-        <section data-aos="fade-up" className="flex items-center flex-col md:flex-row min-h-svh justify-center relative bg-sobreMim-vetor bg-center bg-no-repeat">
-        <img className="w-64 mb-6 md:mb-0" data-aos="fade-up" data-aos-delay="50" src={me}></img>
+        <section data-aos="fade-up" className="flex items-center flex-col md:flex-row min-h-svh justify-center relative bg-sobreMim-vetor bg-center bg-no-repeat px-10 mt-20 md:mt-10 ">
+        <img className="w-full md:w-1/4 md:mr-6 mb-10 md:mb-0" data-aos="fade-up" data-aos-delay="50" src={me}></img>
         <div className="md:ml-10 w-4/5 md:w-2/5 text-center md:text-left" data-aos="fade-up" data-aos-delay="50">
           <TituloSecundario>Olá, Meu nome é Eduardo Soares</TituloSecundario>
-          <p className="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam lorem mauris, id lacinia nunc semper eu. Etiam gravida ipsum nunc, at ultrices nisl gravida non. </p>
-          <ul className="flex items-center mb-6">
+          <ul className="mb-6 list-disc">
+            {topicos.map((topico, i) => <li className="mb-3"><strong>{topico[0]}: </strong>{topico[1]}</li>)}
+          </ul>
+          <ul className="flex items-center mb-6 flex-wrap">
             <p className="font-bold mr-3">skills:</p>
-            <SkillsContainer titulo="node.js"></SkillsContainer>
+            {skills && skills.map(skill => (
+              <SkillsContainer key={skill.titulo} skill={skill}></SkillsContainer>
+            ))}
           </ul>
           <div className="flex">
             <p className="font-bold mr-4">Fale comigo:</p>
