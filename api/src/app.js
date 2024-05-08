@@ -22,7 +22,7 @@ routes(app)
 app.use(handler404)
 app.use(handlerErros);
 
-const options = {
+/* const options = {
     key: fs.readFileSync('src/ssl/sua_chave_privada.pem'),
     cert: fs.readFileSync('src/ssl/seu_certificado.pem')
   };
@@ -38,6 +38,6 @@ app.use((req, res, next) => {
 // Iniciar o servidor HTTPS
 https.createServer(options, app).listen(443, () => {
     console.log('Servidor HTTPS rodando na porta 443');
-});
+}); */
 
 export default app
