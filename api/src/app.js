@@ -5,6 +5,9 @@ import cors from "cors"
 import handlerErros from "./middlewares/handlerErros.js";
 import handler404 from "./middlewares/handler404.js";
 
+import fs from 'fs'
+import https from "https"
+
 const app = express()
 
 app.use(cors())
@@ -18,5 +21,23 @@ routes(app)
 
 app.use(handler404)
 app.use(handlerErros);
+
+const options = {
+    key: fs.readFileSync('src/ssl/sua_chave_privada.pem'),
+    cert: fs.readFileSync('src/ssl/seu_certificado.pem')
+  };
+
+// Configurar o servidor HTTP para redirecionar para HTTPS
+app.use((req, res, next) => {
+    if (!req.secure) {
+      return res.redirect(['https://', req.get('Host'), req.url].join(''));
+    }
+    next();
+  });
+
+// Iniciar o servidor HTTPS
+https.createServer(options, app).listen(443, () => {
+    console.log('Servidor HTTPS rodando na porta 443');
+});
 
 export default app
