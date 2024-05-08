@@ -12,11 +12,6 @@ const app = express()
 
 app.use(cors())
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://eduardosoares.online');
-  next();
-});
-
 db.once("open", () => console.log("escutando banco de dados"));
 db.on("error", (error) => console.log(error + "- erro ao conectar com o banco de dados"))
 
