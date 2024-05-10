@@ -17,6 +17,8 @@ services:
       - mongo
     env_file:
       - ./api/.env
+    volumes:
+      - api-volume:/var/api/uploads
 
   spa:
     container_name: api-portfolio
@@ -44,3 +46,4 @@ services:
 volumes:
   mongo-portfolio-volume:
   spa-volume:
+  api-volume:

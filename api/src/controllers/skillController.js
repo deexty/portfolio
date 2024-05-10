@@ -30,7 +30,7 @@ class Skill{
                 return res.status(404).json({ message: "Skill não encontrada" });
             }
             
-            fs.unlinkSync(`uploads/${skill.imagem}`);
+            fs.unlinkSync(`/var/api/uploads/${skill.imagem}`);
 
             const skillRemovida = await skillModel.findByIdAndDelete(skill._id)
             res.json({ message: "Imagem removida com sucesso" });

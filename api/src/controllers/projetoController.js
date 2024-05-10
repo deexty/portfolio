@@ -69,7 +69,7 @@ class Projetos{
             if (!projeto) {
                 return res.status(404).json({ message: "Projeto não encontrado" });
             }
-            fs.unlinkSync(`uploads/${projeto.imagem}`);
+            fs.unlinkSync(`/var/api/uploads/${projeto.imagem}`);
 
             const projetoDeletado = await projetosModel.findByIdAndDelete(projeto._id);
             res.json({ message: "Imagem removida com sucesso" });

@@ -36,7 +36,7 @@ export default function LastProject() {
             data-aos="fade-up"
           >
             <div className="w-full md:w-3/5 flex flex-col justify-between items-start order-2 lg:order-1 mb-10 lg:mb-0">
-              <p className="text-2xl pl-4 border-l-2 border-white mb-6">
+              <p className="text-2xl pl-4 border-l-2 border-white mb-6 capitalize">
                 {projetos[projetos.length - 1].titulo}
               </p>
               <div>

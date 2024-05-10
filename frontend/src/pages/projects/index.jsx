@@ -50,8 +50,9 @@ export default function Projects() {
     <>
       <section className="min-h-screen-calc px-10 sm:px-20 pb-20">
         <div className="flex items-center mb-6">
+          <p className="mr-2">filtros:</p>
           <select
-            className="block appearance-none bg-black py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer before:"
+            className="block appearance-none bg-black py-2 rounded shadow leading-tight focus:outline-none focus:shadow-outline cursor-pointer font-bold underline"
             onChange={(e) => {
               if(e.target.value){
                 carregaProjetosFiltradas(e.target.value)
@@ -64,7 +65,7 @@ export default function Projects() {
               value=""
               className="selection:bg-red"
             >
-              filtrar
+              nenhum
             </option>
             {skills.map(skill => <option value={skill.titulo} key={skill.titulo}>{skill.titulo}</option>)}
           </select>

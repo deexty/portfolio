@@ -12,7 +12,7 @@ class Imagem{
             }
 
             // Retorna o caminho completo da imagem
-            const imagePath = path.resolve('uploads/', arquivo);
+            const imagePath = path.resolve('/var/api/uploads', arquivo);
 
             // Envia a imagem como resposta
             res.sendFile(imagePath);

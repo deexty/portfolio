@@ -41,7 +41,7 @@ export default function SobreMim() {
   return (
     <section
       data-aos="fade-up"
-      className="flex items-center flex-col min-h-svh justify-center relative bg-sobreMim-vetor bg-center bg-no-repeat px-10 my-32 lg:my-0 "
+      className="flex items-center flex-col min-h-screen justify-center relative bg-sobreMim-vetor bg-center bg-no-repeat px-10 my-32 lg:my-0 "
     >
       <div data-aos="fade-up" className="flex flex-col lg:flex-row justify-center items-center sm:px-24 lg:px-0">
         <img

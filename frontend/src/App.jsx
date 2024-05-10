@@ -7,6 +7,7 @@ import DetalhesProjeto from './pages/projects/detalhes'
 import Admin from './pages/admin'
 import { useState } from 'react'
 import Login from './pages/login'
+import Page404 from './pages/404'
 
 function App() {
   const [usuarioLogado, setUsuarioLogado] = useState(false)
@@ -21,6 +22,7 @@ function App() {
           <Route path='/projetos/:id' element={<DetalhesProjeto></DetalhesProjeto>}></Route>
           <Route path='/admin' element={<Admin usuarioLogado={usuarioLogado}></Admin>}></Route>
           <Route path='/login' element={<Login setUsuarioLogado={setUsuarioLogado}></Login>}></Route>
+          <Route path='*' element={<Page404></Page404>}></Route>
         </Routes>
         <p className='w-full text-center py-3 absolute text-sm -mt-11'>Desenvolvido por: Eduardo Soares</p>
       </BrowserRouter>

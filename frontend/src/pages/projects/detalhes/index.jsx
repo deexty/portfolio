@@ -2,10 +2,11 @@ import { Link, useParams } from "react-router-dom";
 import SkillsContainer from "../../../components/SkillsContainer";
 import { useEffect, useState } from "react";
 import { buscaProjetoId } from "../../../services/projetos";
+import Page404 from "../../404";
 
 export default function DetalhesProjeto() {
     const {id} = useParams();
-    const [projeto, setProjeto] = useState({skills: []});
+    const [projeto, setProjeto] = useState(null);
 
     useEffect(() => {
       const carregaProjeto = async () => {
@@ -23,7 +24,7 @@ export default function DetalhesProjeto() {
   
     return(
         <>
-            {projeto &&
+            {projeto ?
                 <section className="min-h-screen-calc flex flex-col md:flex-row items-center px-10 md:px-20 py-20 animate-fade">
                 <div className="md:w-1/2 order-2 md:order-1">
                     <h1 className="text-2xl font-bold text-center mb-4 capitalize">{projeto.titulo}</h1>
@@ -48,6 +49,8 @@ export default function DetalhesProjeto() {
                 </div>
                 <img className="mb-10 md:mb-0 md:w-1/2 md:ml-10 md:order-2" src={`${import.meta.env.VITE_API_URL}/imagem/${projeto.imagem}`}></img>
                 </section>
+
+                : <Page404></Page404>
             }
         </>
     )
