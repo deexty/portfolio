@@ -66,8 +66,8 @@ export default function SobreMim() {
           </ul>
         </div>
       </div>
-      <ul data-aos="fade-up" className="flex items-center mb-6 flex-wrap">
-        <p className="font-bold mr-3">skills:</p>
+      <ul data-aos="fade-up" className="flex items-center justify-center mb-6 flex-wrap mt-4">
+        <p className="font-bold mr-3">Skills:</p>
         {skills &&
           skills.map((skill) => (
             <SkillsContainer key={skill.titulo} skill={skill}></SkillsContainer>
@@ -97,7 +97,7 @@ export default function SobreMim() {
           </ul>
         </div>
         <p className="text-xs italic mt-2 opacity-75">
-          desenvolvimento profissional e educacional presentes no linkedin
+          Desenvolvimento profissional e educacional presentes no linkedin.
         </p>
       </div>
     </section>

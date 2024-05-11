@@ -32,7 +32,7 @@ export default function DetalhesProjeto() {
                     <p className="font-bold mb-2">
                         Skills utilizadas:
                     </p>
-                    <ul className="flex">
+                    <ul className="flex flex-wrap">
                         {(projeto.skills).map(skill => <SkillsContainer key={skill.titulo} skill={skill}></SkillsContainer>)}
                     </ul>
                     <ul className="flex justify-center mt-6 underline">
