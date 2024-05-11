@@ -1,0 +1,49 @@
+services:
+  mongo: 
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-portfolio-volume:/data/db
+    restart: always 
+
+  api:
+    container_name: api_portfolio
+    build: ./api
+    restart: always
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+    env_file:
+      - ./api/.env
+    volumes:
+      - api-volume:/var/api/uploads
+
+  spa:
+    container_name: api-portfolio
+    build: ./frontend
+    depends_on:
+      - api
+    env_file:
+      - ./frontend/.env
+    volumes:
+      - spa-volume:/var/www/html
+
+  nginx:
+    container_name: nginx_portfolio
+    build: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - api
+      - mongo
+      - spa
+    volumes:
+      - spa-volume:/var/www/html
+      
+volumes:
+  mongo-portfolio-volume:
+  spa-volume:
+  api-volume:
