@@ -10,7 +10,7 @@ Portfolio pessoal, desenvolvido para demonstrar meu trabalho de forma prática e
         -node.js: `https://nodejs.org/en/download`
 3. Clone este repositório: `git clone https://github.com/deexty/portfolio.git`.
 4. Adicione os arquivos .env necessarios para execucão do projeto. </br>
-        -api:
+        <strong>Api:</strong>
             `DB_URL` = `url banco mongo ex:mongodb://mongo:27017/portfolio.`,
            </br>
         -front-end:
