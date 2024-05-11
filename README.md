@@ -21,5 +21,6 @@ Portfolio pessoal, desenvolvido para demonstrar meu trabalho de forma prática e
 
 ## Imagens do Projeto
 
-### Soma
+### Pagina inicial
+![image](https://github.com/deexty/portfolio/assets/139413984/866fad48-721d-4610-b98a-2ad65526dcb8)
 
