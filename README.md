@@ -19,8 +19,6 @@ Portfolio pessoal, desenvolvido para demonstrar meu trabalho de forma prática e
             `VITE_SENHA` = `Senha`, </br>
 6. Execute o codigo: `docker compose up -d`.
 
-## Imagens do Projeto
-
 ### Pagina inicial
 ![image](https://github.com/deexty/portfolio/assets/139413984/866fad48-721d-4610-b98a-2ad65526dcb8)
 
