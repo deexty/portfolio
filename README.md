@@ -12,6 +12,7 @@ Portfolio pessoal, desenvolvido para demonstrar meu trabalho de forma prática e
 4. Adicione os arquivos .env necessarios para execucão do projeto. </br>
         -api:
            - `DB_URL` = `url banco mongo ex:mongodb://mongo:27017/portfolio.`,
+           </br>
         -front-end:
            - `VITE_API_URL` = `http://localhost:3001/api`,
 6. Execute o codigo: `docker compose up -d`.
