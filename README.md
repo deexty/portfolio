@@ -4,9 +4,13 @@ Portfolio pessoal, desenvolvido para demonstrar meu trabalho de forma prática e
 
 ## Instruções de Instalação
 
-1. Clone este repositório: `git clone https://github.com/deexty/portfolio.git`.
-2. Adicione os arquivos .env necessarios para execucão do projeto.
-4. Execute o codigo: `docker compose up -d`.
+1. Certifique se de ter o docker,git e node.js instalados na sua máquina.
+        -docker: `https://docs.docker.com`,
+        -git: `https://git-scm.com`,
+        -node.js: `https://nodejs.org/en/download`
+3. Clone este repositório: `git clone https://github.com/deexty/portfolio.git`.
+4. Adicione os arquivos .env necessarios para execucão do projeto.
+5. Execute o codigo: `docker compose up -d`.
      
    
 
