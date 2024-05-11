@@ -10,19 +10,16 @@ Portfolio pessoal, desenvolvido para demonstrar meu trabalho de forma prática e
         -node.js: `https://nodejs.org/en/download`
 3. Clone este repositório: `git clone https://github.com/deexty/portfolio.git`.
 4. Adicione os arquivos .env necessarios para execucão do projeto. </br>
-        <strong>Api:</strong>
+        <strong>Api:</strong> <br>
             `DB_URL` = `url banco mongo ex:mongodb://mongo:27017/portfolio.`,
            </br>
-        -front-end:
-            `VITE_API_URL` = `http://localhost:3001/api`,
+        <strong>Front-End:</strong> </br>
+            `VITE_API_URL` = `Diretorio da API, ex: http://localhost:3001/api`, </br>
+            `VITE_USUARIO` = `Usuario`, </br>
+            `VITE_SENHA` = `Senha`, </br>
 6. Execute o codigo: `docker compose up -d`.
-     
-   
 
-## Exemplos de Uso
+## Imagens do Projeto
 
 ### Soma
-```python
->>> from calculadora import soma
->>> soma(2, 3)
-5
+
