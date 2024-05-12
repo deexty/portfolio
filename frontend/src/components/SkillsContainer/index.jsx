@@ -6,7 +6,7 @@ export default function SkillsContainer({skill}) {
   return (
     <li className="flex items-center group mr-3">
       <Link to={link} className="flex items-center group mr-2 my-2 last:mr-0">
-        <img src={`${import.meta.env.VITE_API_URL}/imagem/${imagem}`} className="w-8 h-8 cursor-pointer"></img>
+        <img src={`${import.meta.env.VITE_API_URL}/imagem/${imagem}`} className="w-8 h-8 cursor-pointer" alt={titulo}></img>
         {titulo && <p className="ml-2 hidden group-hover:inline-block">{titulo}</p>}
       </Link>
     </li>

@@ -45,10 +45,11 @@ export default function SobreMim() {
     >
       <div data-aos="fade-up" className="flex flex-col lg:flex-row justify-center items-center sm:px-24 lg:px-0">
         <img
-          className="w-full lg:w-1/4 mb-10 mr-0 lg:mr-6 lg:mb-0"
+          className="w-full lg:w-1/4 mb-10 mr-0 lg:mr-6 lg:mb-0 rounded-full max-w-4xl"
           data-aos="fade-up"
           data-aos-delay="50"
           src={me}
+          alt="garoto jovem, cabelo curto e escuro, e pelos faciais em estilo cavanhaque"
         ></img>
         <div
           className="md:ml-10 text-center md:text-left max-w-2xl"
